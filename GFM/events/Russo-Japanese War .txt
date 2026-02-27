@@ -9,12 +9,21 @@ country_event = {
 
 	option = {
 		name = "What the...?! To arms!"
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				alliance_with = THIS
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = 50 }
+			
+		}
 		FROM = {
 			war = {
 				target = RUS
 				attacker_goal = { casus_belli = cut_down_to_size_no_add_wargoal_2 }
 				defender_goal = { casus_belli = cut_down_to_size_no_add_wargoal_2 }
-				call_ally = yes
+				call_ally = no
 			}
 		}
 		any_country = {
@@ -40,18 +49,14 @@ country_event = {
 				alliance_with = JAP
 				war_with = THIS
 			}
-			end_war = THIS
-			relation = { who = THIS value = 100 }
-			#set_country_flag = participating_in_rj_war
+			set_country_flag = participating_in_rj_war
 		}
 		any_country = {
 			limit = {
 				alliance_with = THIS
 				war_with = JAP
 			}
-			end_war = JAP
-			relation = { who = JAP value = 100 }
-			#set_country_flag = participating_in_rj_war
+			set_country_flag = participating_in_rj_war
 		}
 	}
 }

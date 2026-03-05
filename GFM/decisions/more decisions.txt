@@ -167,7 +167,6 @@ political_decisions = {
                         all_core = {
                             owned_by = THIS
                         }
-                        tag = THIS
 						in_sphere = THIS
                         vassal_of = THIS
                     }
@@ -181,7 +180,6 @@ political_decisions = {
                         all_core = {
                             owned_by = THIS
                         }
-                        tag = THIS
 						in_sphere = THIS
                         vassal_of = THIS
                     }
@@ -202,7 +200,6 @@ political_decisions = {
 								province_id = 2134
 							}
                         }
-                        tag = THIS
 						in_sphere = THIS
                         vassal_of = THIS
                     }
@@ -221,7 +218,6 @@ political_decisions = {
 								province_id = 2134
 							}
                         }
-                        tag = THIS
 						in_sphere = THIS
                         vassal_of = THIS
                     }
@@ -579,6 +575,7 @@ political_decisions = {
                 add_accepted_culture = swedish
                 add_accepted_culture = norwegian
                 capital = 372
+                country_event = 485832597
             }
             any_country = {
                 limit = {
@@ -731,6 +728,8 @@ political_decisions = {
                 add_accepted_culture = norwegian
                 add_accepted_culture = danish
                 capital = 343
+                country_event = 485832597
+                country_event = 485832598
             }
             any_country = {
                 limit = {
@@ -813,6 +812,7 @@ political_decisions = {
             SCA = {
                 inherit = FIN
                 add_accepted_culture = finnish
+                country_event = 485832598
             }
             FIN = { all_core = { add_core = SCA } }
             any_country = {
@@ -937,6 +937,7 @@ political_decisions = {
             SCA = {
                 inherit = KRL
                 add_accepted_culture = finnish
+                country_event = 485832598
             }
             KRL = { all_core = { add_core = SCA } }
             any_country = {

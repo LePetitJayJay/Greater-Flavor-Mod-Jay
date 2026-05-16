@@ -192,6 +192,7 @@ political_decisions = {
 				target = RGA
 				attacker_goal = { casus_belli = treaty_port_casus_belli_no_infamy }
 				defender_goal = { casus_belli = status_quo }
+				call_ally = no
 			}
 			RGA = { country_event = 18482425 }
         }

@@ -3589,67 +3589,6 @@ country_event = {
     }
 }
 
-#ottomans gain core on crimea
-country_event = {
-	id = 4888700
-	title = "EVTNAME4888700"
-	desc = "EVTDESC4888700"
-
-	fire_only_once = yes
-
-	trigger = {
-		OR = { tag = TUR tag = ALA }
-		has_country_flag = TUR_RUS_cores
-		is_greater_power = yes
-		RUS_964 = { owned_by = THIS }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
-		name = "EVT4888700OPTA"
-		RUS_964 = { add_core = THIS }
-		random_owned = { limit = { owner = { 1095 = { is_core = THIS } } }
-		owner = {
-			1049 = { add_core = THIS }
-			3392 = { add_core = THIS }
-			3315 = { add_core = THIS }
-		} }
-		add_accepted_culture = tatar
-		prestige = -15
-		any_pop = {
-			limit = {
-				has_pop_culture = turkish
-			}
-			consciousness = 1
-			ideology = {
-				factor = 0.1
-				value = reactionary
-			}
-		}
-		ai_chance = {
-			factor = 40
-		}
-	}
-
-	option = {
-		name = "EVT4888700OPTB"
-		prestige = 10
-		any_pop = {
-			limit = {
-				has_pop_culture = tatar
-			}
-			militancy = 4
-			consciousness = 4
-		}
-		ai_chance = {
-			factor = 60
-		}
-	}
-}
-
 #ottoman administration of tabriz
 country_event = {
 	id = 4888701

@@ -9088,6 +9088,7 @@ country_event = {
 				value = jingoism
 			}
 		}
+		random_country = { limit = { tag = CIR exists = yes } country_event = 800923 }
 		ai_chance = { factor = 1 }
 	}
 
@@ -9095,6 +9096,7 @@ country_event = {
 		name = "No Briton faces detention in Russia!"
 		RUS = { country_event = 27519181 }
 		relation = { who = RUS value = -50 }
+		random_country = { limit = { tag = CIR exists = yes } country_event = 800923 }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -19667,6 +19669,7 @@ country_event = {
 						province_id = 932
 						province_id = 1132
 						province_id = 933
+						province_id = 934
 						province_id = 3407
 						province_id = 3989
 						province_id = 930
@@ -19710,6 +19713,7 @@ country_event = {
 					province_id = 932
 					province_id = 1132
 					province_id = 933
+					province_id = 934
 					province_id = 3407
 					province_id = 3989
 					province_id = 930
@@ -20064,6 +20068,7 @@ country_event = {
 						province_id = 932
 						province_id = 1132
 						province_id = 933
+						province_id = 934
 						province_id = 3407
 						province_id = 3989
 						province_id = 930
@@ -20107,6 +20112,7 @@ country_event = {
 					province_id = 932
 					province_id = 1132
 					province_id = 933
+					province_id = 934
 					province_id = 3407
 					province_id = 3989
 					province_id = 930
@@ -20477,6 +20483,7 @@ country_event = {
 						province_id = 932
 						province_id = 1132
 						province_id = 933
+						province_id = 934
 						province_id = 3407
 						province_id = 3989
 						province_id = 930
@@ -20520,6 +20527,7 @@ country_event = {
 					province_id = 932
 					province_id = 1132
 					province_id = 933
+					province_id = 934
 					province_id = 3407
 					province_id = 3989
 					province_id = 930
@@ -20982,6 +20990,7 @@ country_event = {
 						province_id = 932
 						province_id = 1132
 						province_id = 933
+						province_id = 934
 						province_id = 3407
 						province_id = 3989
 						province_id = 930
@@ -21025,6 +21034,7 @@ country_event = {
 					province_id = 932
 					province_id = 1132
 					province_id = 933
+					province_id = 934
 					province_id = 3407
 					province_id = 3989
 					province_id = 930
@@ -21505,6 +21515,7 @@ country_event = {
 						province_id = 932
 						province_id = 1132
 						province_id = 933
+						province_id = 934
 						province_id = 3407
 						province_id = 3989
 						province_id = 930
@@ -21548,6 +21559,7 @@ country_event = {
 					province_id = 932
 					province_id = 1132
 					province_id = 933
+					province_id = 934
 					province_id = 3407
 					province_id = 3989
 					province_id = 930
@@ -44421,9 +44433,9 @@ country_event = {
     trigger = {
 		has_global_flag = yesturyestur
 		tag = TUR
-		1700 = { OR = { owner = { tag = THIS vassal_of = THIS } } }
-		3826 = { OR = { owner = { tag = THIS vassal_of = THIS } } }
-		1710 = { OR = { owner = { tag = THIS vassal_of = THIS } } }
+		1700 = { owner = { OR = { tag = THIS vassal_of = THIS } } }
+		3826 = { owner = { OR = { tag = THIS vassal_of = THIS } } }
+		1710 = { owner = { OR = { tag = THIS vassal_of = THIS } } }
 		NOT = { year = 1855 }
     }
 

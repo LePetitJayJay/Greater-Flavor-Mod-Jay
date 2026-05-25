@@ -1556,6 +1556,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
+						TSI = { exists = yes }
 						TSI = { is_vassal = no }
 					}
 				}

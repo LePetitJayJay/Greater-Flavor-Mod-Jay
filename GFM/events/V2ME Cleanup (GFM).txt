@@ -5811,6 +5811,9 @@ country_event = {
 					tag = CLC
 					tag = HAN
 					tag = CRI
+					tag = WHA
+					tag = SCO
+					tag = CRN
 				}
 				exists = yes
 			}
@@ -5972,6 +5975,7 @@ country_event = {
 					tag = SVY
 					AND = { tag = OLD overlord = { has_country_flag = hanseatic_departments } }
 					tag = ALA
+					tag = PLC
 				}
 				exists = yes
 			}
@@ -8374,6 +8378,25 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 706
+				owner = {
+					primary_culture = french
+					PLC = { exists = no }
+					NOT = { PLC = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				PLC = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 1053
 				owner = {
 					primary_culture = russian
@@ -10240,6 +10263,25 @@ country_event = {
 					add_accepted_culture = north_german
 					add_accepted_culture = south_german
 					set_country_flag = german_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 299
+				owner = {
+					primary_culture = british
+					CRN = { exists = no }
+					NOT = { CRN = { government = colonial_company } }
+				}
+			}
+			owner = {
+				CRN = {
+					government = colonial_company
+					add_accepted_culture = british
+					set_country_flag = british_accepted
 				}
 			}
 		}
@@ -20183,13 +20225,13 @@ country_event = {
 				}
 			}
 		}
-#Persian/Afghan/Sikh Aceh
+#Yankee Aceh
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
 				province_id = 1405
 				owner = {
-					is_culture_group = iranian_turanian
+					is_culture_group = american_cultures
 					ATJ = { exists = no }
 					NOT = { ATJ = { government = colonial_company_3 } }
 				}

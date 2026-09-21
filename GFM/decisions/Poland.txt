@@ -208,6 +208,7 @@ political_decisions = {
 			2584 = { remove_core = PLC }
 			3318 = { remove_core = PLC }
 			3861 = { remove_core = PLC }
+			1006 = { remove_core = PLC }
             any_country = {
                 limit = {
                     OR = {

@@ -332,7 +332,9 @@ country_event = {
 				}
 			}
 			owner = {
-				BOR = { all_core = { add_core = FRA remove_core = BOR } change_tag = FRA }
+				BOR = { 
+				    country_event = 184812323 
+				}
 			}
 		}
 		random_owned = {
@@ -344,26 +346,7 @@ country_event = {
 			}
 			owner = {
 				SPC = {
-					remove_country_modifier = fueros_unresolved_1
-					remove_country_modifier = fueros_unresolved_2
-					remove_country_modifier = fueros_unresolved_3
-					remove_country_modifier = fueros_unresolved_4
-					remove_country_modifier = fueros_unresolved_5
-					remove_country_modifier = fueros_unresolved_6
-					remove_country_modifier = fueros_unresolved_7
-					remove_country_modifier = carlist_distributism
-					remove_country_modifier = marotist_reforms
-					any_owned = {
-						remove_province_modifier = fueros_autonomy
-						remove_province_modifier = fueros_autonomy_2
-						remove_province_modifier = fueros_autonomy_3
-						remove_province_modifier = fueros_autonomy_4
-					}
-					all_core = {
-						add_core = SPA
-						remove_core = SPC
-					}
-					change_tag = SPA
+					country_event = 184812323
 				}
 			}
 		}
@@ -3435,6 +3418,7 @@ country_event = {
 			limit = {
 				tag = PAP
 				government = democracy
+				NOT = { has_country_flag = roman_republic_joins }
 				AND = {
 					exists = ITA
 					ITA = {
@@ -3704,6 +3688,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				GAB = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = GAB }
@@ -3711,6 +3696,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				CAR = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = CAR }
@@ -3718,6 +3704,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				TRZ = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = TRZ }
@@ -3725,6 +3712,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				TUA = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = TUA }
@@ -3732,6 +3720,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				WAD = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = WAD }
@@ -3739,6 +3728,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = FRA
+				ai = yes
 				BGU = { vassal_of = FRA exists = yes }
 			}
 			FRA = { inherit = BGU }
@@ -3746,6 +3736,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = BOR
+				ai = yes
 				GAB = { vassal_of = BOR exists = yes }
 			}
 			BOR = { inherit = GAB }
@@ -3753,6 +3744,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = BOR
+				ai = yes
 				CAR = { vassal_of = BOR exists = yes }
 			}
 			BOR = { inherit = CAR }
@@ -3760,6 +3752,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = BOR
+				ai = yes
 				TRZ = { vassal_of = BOR exists = yes }
 			}
 			BOR = { inherit = TRZ }
@@ -3767,6 +3760,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = BOR
+				ai = yes
 				WAD = { vassal_of = BOR exists = yes }
 			}
 			BOR = { inherit = WAD }
@@ -3774,6 +3768,7 @@ country_event = {
 		any_country = {
 			limit = {
 				tag = BOR
+				ai = yes
 				BGU = { vassal_of = BOR exists = yes }
 			}
 			BOR = { inherit = BGU }
@@ -4838,16 +4833,16 @@ country_event = {
 				tag = EIC
 				exists = yes
 				war = no
+				is_vassal = no
+			    part_of_sphere = no
 				OR = {
 					ENL = { exists = yes }
 					ENG = { exists = yes }
 				}
-				OR = {
+				NOT = {
 					has_global_flag = sepoy_rebellion
 					year = 1862
-					NOT = { government = colonial_company }
 				}
-				NOT = { has_global_flag = war_with_EIC }
 				ai = yes
 			}
 			any_country = {
@@ -4855,18 +4850,81 @@ country_event = {
 					tag = ENG
 					exists = yes
 				}
-				UTI = { inherit = EIC }
-				ENG = { inherit = UTI }
+				ENG = { create_vassal = EIC }
 			}
 			any_country = {
 				limit = {
 					tag = ENL
 					exists = yes
 				}
-				UTI = { inherit = EIC }
-				ENL = { inherit = UTI }
+				ENL = { create_vassal = EIC }
 			}
 		}
+		any_country = {
+			limit = {
+				tag = EIC
+				exists = yes
+				war = no
+				is_vassal = no
+			    part_of_sphere = no
+				OR = {
+					ENL = { exists = yes }
+					ENG = { exists = yes }
+				}
+				OR = {
+					has_global_flag = sepoy_rebellion
+					year = 1862
+				}
+				NOT = { truce_with = ENG truce_with = ENL }
+				NOT = { has_global_flag = EIC_independence }
+				ai = yes
+			}
+			any_country = {
+				limit = {
+					tag = ENG
+					exists = yes
+				}
+				ENG = { inherit = EIC }
+			}
+			any_country = {
+				limit = {
+					tag = ENL
+					exists = yes
+				}
+				ENL = { inherit = EIC }
+			}
+		}
+		any_country = {
+			limit = {
+				tag = EIC
+				exists = yes
+				war = no
+				OR = {
+					is_vassal = yes
+					part_of_sphere = yes
+				}
+				NOT = {
+				  in_sphere = ENG
+				  vassal_of = ENG
+				  in_sphere = ENL
+				  vassal_of = ENL
+				}
+				OR = {
+					has_global_flag = sepoy_rebellion
+					year = 1862
+				}
+				ai = yes
+			}
+			EIC = {
+				overlord = { inherit = EIC }
+			}
+			any_country = {
+				limit = {
+					is_sphere_leader_of = EIC
+				}
+				inherit = EIC
+			}
+		}		
 		any_country = {
 			limit = {
 				tag = EIC
@@ -5759,6 +5817,8 @@ country_event = {
 					tag = TAI
 					tag = INO
 					tag = MLY
+					tag = PHG
+					tag = SLG
 					tag = PPG
 					tag = AST
 					tag = NZL
@@ -5825,6 +5885,9 @@ country_event = {
 					tag = WHA
 					tag = SCO
 					tag = CRN
+					tag = ACA
+					tag = SCA
+					tag = JOH
 				}
 				exists = yes
 			}
@@ -5987,12 +6050,31 @@ country_event = {
 					AND = { tag = OLD overlord = { has_country_flag = hanseatic_departments } }
 					tag = ALA
 					tag = PLC
+					tag = LOM
+					tag = DZG
+					tag = LIT
+					tag = WUR
+					tag = LUC
+					tag = CZH
+					tag = WLL
+					tag = PAP
 				}
 				exists = yes
 			}
 			government = colonial_company_2
 			add_accepted_culture = french
 			set_country_flag = french_accepted
+			random_owned = {
+				limit = {
+					owner = {
+						primary_culture = polish
+						has_global_flag = global_mc_setup_complete
+					}
+				}
+				owner = {
+					country_event = 365457447
+				}
+			}
 		}
 		any_country = {
 			limit = {
@@ -6131,6 +6213,8 @@ country_event = {
 					tag = FRI
 					tag = BOH
 					tag = FIU
+					tag = CZH
+					tag = RGS
 				}
 				exists = yes
 			}
@@ -6335,6 +6419,7 @@ country_event = {
 					tag = CLC
 					tag = BOS
 					tag = CRO
+					tag = CZH
 				}
 				exists = yes
 			}
@@ -6371,7 +6456,6 @@ country_event = {
 					tag = NZL
 					tag = VTU
 					tag = HAW
-					tag = SWK
 					tag = TKS
 					tag = KAM
 					tag = SXI
@@ -6385,7 +6469,6 @@ country_event = {
 					tag = QNG
 					tag = TPG
 					tag = XBI
-					tag = XIN
 					tag = YAK
 				}
 				exists = yes
@@ -6413,6 +6496,7 @@ country_event = {
 					tag = LSK
 					tag = SZC
 					tag = TNT
+					tag = XIN
 				}
 				exists = yes
 			}
@@ -6513,6 +6597,10 @@ country_event = {
 					tag = LIT
 					tag = MCD
 					tag = DAG
+					tag = CZH
+					tag = BOH
+					tag = BRY
+					tag = TNT
 				}
 				exists = yes
 			}
@@ -6543,6 +6631,10 @@ country_event = {
 					tag = SIE
 					tag = SCA
 					tag = CRI
+					tag = MRV
+					tag = SLV
+					tag = XIN
+					tag = MGL
 				}
 				exists = yes
 			}
@@ -6731,6 +6823,17 @@ country_event = {
 				exists = yes
 			}
 			government = colonial_company
+			random_owned = {
+				limit = {
+					owner = {
+						tag = SER
+						has_country_flag = kingdom_of_serbia
+					}
+				}
+				owner = {
+					clr_country_flag = kingdom_of_serbia
+				}
+			}
 		}
 		any_country = { #No culture section cause Ottos aren't a traditional colonizer
 			limit = {
@@ -6834,27 +6937,12 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				overlord = { has_country_flag = control_frankfurt_parlament }
-				NOT = { government = colonial_company_4 }
-				NOT = { has_country_flag = colony_exemption }
-				OR = {
-					tag = FRM
-					tag = WES
-					tag = LUB
-				}
-			}
-			government = colonial_company_4
-			add_accepted_culture = north_german
-			add_accepted_culture = south_german
-			set_country_flag = german_accepted
-		}
-		any_country = {
-			limit = {
 				overlord = { OR = { primary_culture = north_german primary_culture = south_german } }
 				NOT = { government = colonial_company }
 				NOT = { has_country_flag = colony_exemption }
 				OR = {
 					tag = PZN
+					tag = DZG
 					tag = SLS
 					tag = ALS
 					tag = BEL
@@ -7612,6 +7700,25 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 249 
+				owner = {
+					primary_culture = british
+					ACA = { exists = no }
+					NOT = { ACA = { government = colonial_company } }
+				}
+			}
+			owner = {
+				ACA = {
+					government = colonial_company
+					add_accepted_culture = british
+					set_country_flag = british_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 1258
 				owner = {
 					primary_culture = british
@@ -7688,25 +7795,6 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
-				province_id = 1394
-				owner = {
-					primary_culture = japanese
-					SWK = { exists = no }
-					NOT = { SWK = { government = colonial_company_4 } }
-				}
-			}
-			owner = {
-				SWK = {
-					government = colonial_company_4
-					add_accepted_culture = japanese
-					set_country_flag = japanese_accepted
-				}
-			}
-		}
-		# Audax Validator "." Ignore_NEXT
-		any_land_province = {
-			limit = {
-				# Audax Validator "." Ignore_NEXT
 				province_id = 1195
 				owner = {
 					primary_culture = japanese
@@ -7765,6 +7853,25 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 726
+				owner = {
+					primary_culture = french
+					LOM = { exists = no }
+					NOT = { LOM = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				LOM = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 657
 				owner = {
 					OR = { primary_culture = north_german primary_culture = south_german }
@@ -7798,6 +7905,83 @@ country_event = {
 					government = colonial_company_3
 					add_accepted_culture = north_german add_accepted_culture = south_german
 					set_country_flag = german_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 3483
+				owner = {
+					primary_culture = russian
+					CZH = { exists = no }
+					NOT = { CZH = { government = colonial_company } }
+				}
+			}
+			owner = {
+				CZH = {
+					government = colonial_company
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 3483
+				owner = {
+					primary_culture = french
+					CZH = { exists = no }
+					NOT = { CZH = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				CZH = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 3483
+				owner = {
+					OR = { primary_culture = north_german primary_culture = south_german }
+					CZH = { exists = no }
+					NOT = { CZH = { government = colonial_company_3 } }
+				}
+			}
+			owner = {
+				CZH = {
+					government = colonial_company_3
+					add_accepted_culture = north_german add_accepted_culture = south_german
+					set_country_flag = german_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 3483
+				owner = {
+					is_culture_group = italian
+					CZH = { exists = no }
+					NOT = { CZH = { government = colonial_company_4 } }
+				}
+			}
+			owner = {
+				CZH = {
+					government = colonial_company_4
+					add_accepted_culture = north_italian 
+					add_accepted_culture = south_italian
+					set_country_flag = italian_accepted
 				}
 			}
 		}
@@ -7876,6 +8060,25 @@ country_event = {
 					government = colonial_company
 					add_accepted_culture = hungarian
 					set_country_flag = hungarian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 633
+				owner = {
+					primary_culture = russian
+					SLV = { exists = no }
+					NOT = { SLV = { government = colonial_company_4 } }
+				}
+			}
+			owner = {
+				SLV = {
+					government = colonial_company_4
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
 				}
 			}
 		}
@@ -8061,6 +8264,25 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 631
+				owner = {
+					primary_culture = russian
+					MRV = { exists = no }
+					NOT = { MRV = { government = colonial_company_4 } }
+				}
+			}
+			owner = {
+				MRV = {
+					government = colonial_company_4
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 734
 				owner = {
 					OR = { primary_culture = north_german primary_culture = south_german }
@@ -8214,6 +8436,25 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 589
+				owner = {
+					primary_culture = french
+					WUR = { exists = no }
+					NOT = { WUR = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				WUR = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 575
 				owner = {
 					OR = { primary_culture = north_german primary_culture = south_german }
@@ -8300,7 +8541,8 @@ country_event = {
 			owner = {
 				BOS = {
 					government = colonial_company_4
-					add_accepted_culture = north_italian add_accepted_culture = south_italian
+					add_accepted_culture = north_italian 
+					add_accepted_culture = south_italian
 					set_country_flag = italian_accepted
 				}
 			}
@@ -8387,6 +8629,46 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 690
+				owner = {
+					OR = { primary_culture = north_german primary_culture = south_german }
+					DZG = { exists = no }
+					NOT = { DZG = { government = colonial_company } }
+				}
+			}
+			owner = {
+				DZG = {
+					government = colonial_company
+					add_accepted_culture = north_german add_accepted_culture = south_german
+					set_country_flag = german_accepted
+					country_event = 365457447
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 690
+				owner = {
+					primary_culture = french
+					DZG = { exists = no }
+					NOT = { DZG = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				DZG = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+					country_event = 365457447
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 706
 				owner = {
 					OR = { primary_culture = north_german primary_culture = south_german }
@@ -8457,6 +8739,25 @@ country_event = {
 					government = colonial_company
 					add_accepted_culture = russian
 					set_country_flag = russian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 360
+				owner = {
+					primary_culture = french
+					LIT = { exists = no }
+					NOT = { LIT = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				LIT = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
 				}
 			}
 		}
@@ -8762,6 +9063,25 @@ country_event = {
 					government = colonial_company
 					add_accepted_culture = british
 					set_country_flag = british_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 392
+				owner = {
+					primary_culture = french
+					WLL = { exists = no }
+					NOT = { WLL = { government = colonial_company } }
+				}
+			}
+			owner = {
+				WLL = {
+					government = colonial_company
+					add_accepted_culture = french
+					set_country_flag = french_accepted
 				}
 			}
 		}
@@ -11585,6 +11905,26 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 2463
+				owner = {
+					OR = { primary_culture = north_german primary_culture = south_german }
+					RGS = { exists = no }
+					NOT = { RGS = { government = colonial_company_3 } }
+				}
+			}
+			owner = {
+				RGS = {
+					government = colonial_company_3
+					add_accepted_culture = north_german
+					add_accepted_culture = south_german
+					set_country_flag = german_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 1446
 				owner = {
 					primary_culture = british
@@ -11907,7 +12247,7 @@ country_event = {
 					set_country_flag = french_accepted
 				}
 			}
-		}		
+		}
 		# Audax Validator "." Ignore_NEXT
 		any_land_province = {
 			limit = {
@@ -11921,6 +12261,44 @@ country_event = {
 			}
 			owner = {
 				SVY = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 746
+				owner = {
+					primary_culture = french
+					LUC = { exists = no }
+					NOT = { LUC = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				LUC = {
+					government = colonial_company_2
+					add_accepted_culture = french
+					set_country_flag = french_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 749
+				owner = {
+					primary_culture = french
+					PAP = { exists = no }
+					NOT = { PAP = { government = colonial_company_2 } }
+				}
+			}
+			owner = {
+				PAP = {
 					government = colonial_company_2
 					add_accepted_culture = french
 					set_country_flag = french_accepted
@@ -12454,6 +12832,25 @@ country_event = {
 					government = colonial_company_3
 					add_accepted_culture = japanese
 					set_country_flag = japanese_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 1468
+				owner = {
+					primary_culture = russian
+					MGL = { exists = no }
+					NOT = { MGL = { government = colonial_company_4 } }
+				}
+			}
+			owner = {
+				MGL = {
+					government = colonial_company_4
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
 				}
 			}
 		}
@@ -17506,6 +17903,63 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
+				province_id = 1385
+				owner = {
+					primary_culture = british
+					JOH = { exists = no }
+					NOT = { JOH = { government = colonial_company } }
+				}
+			}
+			owner = {
+				JOH = {
+					government = colonial_company
+					add_accepted_culture = british
+					set_country_flag = british_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 1387
+				owner = {
+					primary_culture = british
+					SLG = { exists = no }
+					NOT = { SLG = { government = colonial_company } }
+				}
+			}
+			owner = {
+				SLG = {
+					government = colonial_company
+					add_accepted_culture = british
+					set_country_flag = british_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 1390
+				owner = {
+					primary_culture = british
+					PHG = { exists = no }
+					NOT = { PHG = { government = colonial_company } }
+				}
+			}
+			owner = {
+				PHG = {
+					government = colonial_company
+					add_accepted_culture = british
+					set_country_flag = british_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
 				province_id = 2528
 				owner = {
 					primary_culture = british
@@ -18023,6 +18477,7 @@ country_event = {
 			owner = {
 				SER = {
 					government = colonial_company
+					clr_country_flag = kingdom_of_serbia
 				}
 			}
 		}
@@ -19710,6 +20165,25 @@ country_event = {
 				# Audax Validator "." Ignore_NEXT
 				province_id = 2670
 				owner = {
+					primary_culture = russian
+					BRY = { exists = no }
+					NOT = { BRY = { government = colonial_company } }
+				}
+			}
+			owner = {
+				BRY = {
+					government = colonial_company
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 2670
+				owner = {
 					primary_culture = japanese
 					BRY = { exists = no }
 					NOT = { BRY = { government = colonial_company_4 } }
@@ -19862,6 +20336,25 @@ country_event = {
 				# Audax Validator "." Ignore_NEXT
 				province_id = 1469
 				owner = {
+					primary_culture = russian
+					TNT = { exists = no }
+					NOT = { TNT = { government = colonial_company } }
+				}
+			}
+			owner = {
+				TNT = {
+					government = colonial_company
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 1469
+				owner = {
 					primary_culture = japanese
 					TNT = { exists = no }
 					NOT = { TNT = { government = colonial_company_3 } }
@@ -19921,14 +20414,33 @@ country_event = {
 				owner = {
 					primary_culture = japanese
 					XIN = { exists = no }
+					NOT = { XIN = { government = colonial_company_3 } }
+				}
+			}
+			owner = {
+				XIN = {
+					government = colonial_company_3
+					add_accepted_culture = japanese
+					set_country_flag = japanese_accepted
+				}
+			}
+		}
+		# Audax Validator "." Ignore_NEXT
+		any_land_province = {
+			limit = {
+				# Audax Validator "." Ignore_NEXT
+				province_id = 1594
+				owner = {
+					primary_culture = russian
+					XIN = { exists = no }
 					NOT = { XIN = { government = colonial_company_4 } }
 				}
 			}
 			owner = {
 				XIN = {
 					government = colonial_company_4
-					add_accepted_culture = japanese
-					set_country_flag = japanese_accepted
+					add_accepted_culture = russian
+					set_country_flag = russian_accepted
 				}
 			}
 		}
@@ -20167,7 +20679,7 @@ country_event = {
 		any_land_province = {
 			limit = {
 				# Audax Validator "." Ignore_NEXT
-				province_id = 670
+				province_id = 678
 				owner = {
 					primary_culture = russian
 					MOL = { exists = no }
@@ -20676,6 +21188,16 @@ country_event = {
 				overlord = { has_country_flag = vassals_dont_need_to_pay }
 			}
 			set_country_flag = exempt_from_vassal_contribution
+		}
+
+		#amical protectorate cleanup
+		any_country = {
+			limit = {
+				exists = yes
+				is_vassal = no
+				has_country_modifier = amical_protectorate
+			}
+			remove_country_modifier = amical_protectorate
 		}
 		any_country = {
 			limit = {
@@ -30329,7 +30851,7 @@ country_event = {
 					exists = SLW
 					exists = MAL
 					exists = KLM
-					exists = LAN
+					#exists = LAN
 					exists = KTI
 					has_global_flag = indonesia_organized
 					has_global_flag = indonesia_formed
@@ -33057,8 +33579,6 @@ country_event = {
 			owner = {
 				XIN = {
 					government = presidential_dictatorship
-					primary_culture = han_chinese
-	                add_accepted_culture = uighur
 				}
 			}
 		}
@@ -57012,8 +57532,11 @@ country_event = {
 						total_pops = 250000
 					}
 				}
-				NOT = { has_country_flag = exempt_from_vassal_contribution }
-				NOT = { has_country_modifier = monthly_payment_made }
+				NOT = { 
+					has_country_flag = exempt_from_vassal_contribution
+					has_country_modifier = monthly_payment_made
+					has_country_modifier = amical_protectorate
+				}
 			}
 			random_owned = {
 				limit = {

@@ -3618,3 +3618,159 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
+
+country_event = {
+    id = 800982
+    title = "The Province of Prussia"
+    desc = "EVTDESC800982"
+    picture = "konigsberg"
+	fire_only_once = yes
+
+    trigger = {
+        year = 1877
+        PRU = { exists = no }
+		OR = {
+			tag = GER
+			tag = GCF
+		}
+		month = 3
+		owns = 690
+		owns = 695
+    }
+
+    mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_country_flag = hide_tooltip
+		random_owned = {
+			limit = { owner = { has_country_flag = hide_tooltip } }
+			owner = { PRU = { all_core = { remove_core = PRU } } }
+		}
+	}
+
+    option = {
+        name = "Go ahead! Prussia has been united for too long!"
+		clr_country_flag = hide_tooltip
+		PRU_690 = {
+			add_core = DZG
+			remove_core = PRU
+		}
+		PRU_695 = {
+			add_core = PRU
+			remove_core = DZG
+		}
+		any_pop = { limit = { location = { region = PRU_695 } type = bureaucrats } militancy = 1 consciousness = 1 }
+		any_pop = { limit = { location = { region = PRU_690 } type = bureaucrats } militancy = -1 consciousness = -1 }
+        ai_chance = { factor = 9 }
+    }
+
+    option = {
+        name = "The Ordinance is dumb! Keep Prussia united!"
+		clr_country_flag = hide_tooltip
+		PRU_690 = {
+			add_core = DZG
+			add_core = PRU
+		}
+		PRU_695 = {
+			add_core = PRU
+			remove_core = DZG
+		}
+		any_pop = { limit = { location = { region = PRU_690 } type = bureaucrats } militancy = 1 consciousness = 1 }
+		any_pop = { limit = { location = { region = PRU_695 } type = bureaucrats } militancy = -1 consciousness = -1 }
+        ai_chance = { factor = 1 }
+    }
+}
+
+country_event = {
+    id = 801041
+    title = "New Frankfurt and the Frankfurt Kitchen"
+    desc = "EVTDESC801041"
+    picture = "ffmkitchen"
+
+    fire_only_once = yes
+
+    trigger = {
+        invention = modern_design
+		owns = 564 #Frankfurt
+		OR = {
+			upper_house = { ideology = radical value = 0.15 }
+			upper_house = { ideology = socialist value = 0.15 }
+			upper_house = { ideology = communist value = 0.15 }
+		}
+    }
+
+    mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Ein hoch auf May und seine Baubrigade!"
+		prestige = 2.5
+		564 = { life_rating = 1 }
+		any_pop = { limit = { location = { province_id = 564 } } militancy = -1 consciousness = -2  dominant_issue = { factor = 0.2 value = planned_economy } }
+		set_global_flag = maybrigade
+	}
+}
+
+country_event = {
+    id = 801042
+    title = "Das Rote Wien"
+    desc = "EVTDESC801042"
+    picture = "roteswien"
+
+    fire_only_once = yes
+
+    trigger = {
+		owns = 619 #Vienna
+        invention = modern_design
+		OR = {
+			upper_house = { ideology = radical value = 0.15 }
+			upper_house = { ideology = socialist value = 0.15 }
+			upper_house = { ideology = communist value = 0.15 }
+		}
+    }
+
+    mean_time_to_happen = { months = 3 }
+	option = {
+		name = "60 thousand apartments already, 80 thousand, it should be!"
+		619 = { life_rating = 1 }
+		any_pop = { 
+			limit = { location = { province_id = 619 } } 
+			militancy = -1 
+			consciousness = 2 
+			ideology = { value = socialist factor = 0.05 } 
+			dominant_issue = { factor = 0.2 value = planned_economy } 
+		}
+	}
+}
+
+country_event = {
+    id = 801043
+    title = "Berlin Modernism Housing Estates"
+    desc = "EVTDESC801043"
+    picture = "schillerpark"
+
+    fire_only_once = yes
+
+    trigger = {
+		owns = 549 #Berlin
+        invention = modern_design
+		OR = {
+			upper_house = { ideology = radical value = 0.15 }
+			upper_house = { ideology = socialist value = 0.15 }
+			upper_house = { ideology = communist value = 0.15 }
+		}
+    }
+
+    mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Licht, Luft, Raum!"
+		prestige = 2.5
+		549 = { life_rating = 1 }
+		any_pop = { 
+			limit = { location = { province_id = 549 } } 
+			militancy = -1 
+			consciousness = 2 
+			dominant_issue = { factor = 0.2 value = planned_economy } 
+		}
+	}
+}

@@ -169,9 +169,9 @@ country_event = {
 }
 
 country_event = {
-	id = 801041
+	id = 80105
     title = "Freedom"
-    desc = "Following France's victory over the Brits, they have been forced out of India, leaving us free."
+    desc = "Following $FROMCOUNTRY$'s victory over the Brits, they have been forced out of India, leaving us free."
     picture = "rebellion"
 
     is_triggered_only = yes
@@ -251,7 +251,6 @@ country_event = {
 		OR = { 1595 = { owned_by = XIN } 1595 = { owned_by = QNG } }
 		OR = { 1188 = { owned_by = XIN } 1188 = { owned_by = QNG } }
 		OR = { 1186 = { owned_by = XIN } 1186 = { owned_by = QNG } }
-		OR = { 1190 = { owned_by = XIN } 1190 = { owned_by = QNG } }
         NOT = { has_global_flag = sw_set }
     }
 
@@ -7090,7 +7089,7 @@ country_event = {
 
         random_owned = {
             limit = { owner = { civilized = no admin_reform = yes_admin_reform } }
-            TAI = { economic_reform = yes_admin_reform }
+            TAI = { economic_reform = yes_admin_reform activate_technology = early_classical_theory_and_critique }
         }
 
         random_owned = {
@@ -8313,6 +8312,8 @@ country_event = {
 			secede_province = YNN
 		}
         YNN = {
+            primary_culture = hanhui
+            add_accepted_culture = han_chinese
             capital = 1602
             any_pop = {
                 consciousness = -5
@@ -8346,7 +8347,7 @@ country_event = {
         ai_chance = { factor = 1 }
     }
 	option = {
-        name = "For the Hui! §BPlay as Pingnan Guo§W"
+        name = "For the Hui! §BPlay as Dali§W"
         set_global_flag = panthay_rebellion
 		any_owned = {
 			limit = {
@@ -8359,6 +8360,8 @@ country_event = {
 			secede_province = YNN
 		}
         YNN = {
+            primary_culture = hanhui
+            add_accepted_culture = han_chinese
             capital = 1602
             any_pop = {
                 consciousness = -5
@@ -8415,6 +8418,8 @@ country_event = {
         prestige = 10
         plurality = -2
         YNN = {
+            primary_culture = han_chinese
+            add_accepted_culture = hanhui
             government = colonial_company
             religion = mahayana
             set_country_flag = mahayana_country
@@ -8806,8 +8811,6 @@ country_event = {
 		}
 		XIN = {
 			government = colonial_company
-			primary_culture = han_chinese
-			add_accepted_culture = uighur
         }
 		SXI = {
             primary_culture = han_chinese

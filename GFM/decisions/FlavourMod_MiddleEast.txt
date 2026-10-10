@@ -1758,6 +1758,7 @@ political_decisions = {
 				AND = { tag = MKN owns = 932 }
 				AND = { tag = DUB owns = 932 }
 				has_country_flag = is_iran
+                has_country_flag = i_am_bab
             }
             NOT = { has_country_flag = Gulf_claimed }
         }
@@ -1873,6 +1874,7 @@ political_decisions = {
 			badboy = 2.5
 			prestige = 5
 			1141 = { add_core = THIS }
+			set_country_flag = reclaim_lengeh
 		}
 		
 		ai_will_do = {

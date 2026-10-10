@@ -697,62 +697,23 @@ country_event = {
             limit = { RUM = { exists = yes vassal_of = TUR } }
             THIS = { release = RUM release_vassal = RUM leave_alliance = RUM }
         }
-        any_country = {
+        any_land_province = {
             limit = {
-                any_owned_province = { is_core = TUR }
-                NOT = { tag = THIS }
-            }
-            any_owned = {
-                limit = {
-                    is_core = TUR
-                    NOT = {
-                        province_id = 900 #Antioch
-                        region = TUR_860 #Thrace
-                        region = TUR_869 #Izmir
-                        region = TUR_863 #Bursa
-						region = TUR_870 #Eskishehir
-                        region = EGY_843 #Aegean Islands
-                        region = TUR_855 #Cyprus
-                        region = TUR_873 #Konya
-                        region = TUR_876 #Ankara
-                        region = TUR_880 #Kastamonu
-                        region = TUR_882 #Trebizond
-                        region = TUR_890 #Van
-                        region = TUR_894 #Adana
-						province_id = 896
-						province_id = 898
-						province_id = 899
-						province_id = 3279
-						province_id = 2414
-						province_id = 2548
-						province_id = 893
-						province_id = 3405
-						province_id = 889
-						province_id = 3530
-						region = TUR_887 #Erzurum
-						region = TUR_885 #Kars
-						region = TUR_879 #Sivas
-                    }
-                }
-                remove_core = TUR
-            }
-        }
-        any_owned = {
-            limit = {
+                is_core = TUR
                 NOT = {
-					province_id = 900 #Antioch
-					region = TUR_860 #Thrace
-					region = TUR_869 #Izmir
-					region = TUR_863 #Bursa
+                    province_id = 900 #Antioch
+                    region = TUR_860 #Thrace
+                    region = TUR_869 #Izmir
+                    region = TUR_863 #Bursa
 					region = TUR_870 #Eskishehir
-					region = EGY_843 #Aegean Islands
-					region = TUR_855 #Cyprus
-					region = TUR_873 #Konya
-					region = TUR_876 #Ankara
-					region = TUR_880 #Kastamonu
-					region = TUR_882 #Trebizond
-					region = TUR_890 #Van
-					region = TUR_894 #Adana
+                    region = EGY_843 #Aegean Islands
+                    region = TUR_855 #Cyprus
+                    region = TUR_873 #Konya
+                    region = TUR_876 #Ankara
+                    region = TUR_880 #Kastamonu
+                    region = TUR_882 #Trebizond
+                    region = TUR_890 #Van
+                    region = TUR_894 #Adana
 					province_id = 896
 					province_id = 898
 					province_id = 899
@@ -1617,18 +1578,18 @@ country_event = {
         name = "EVT98645OPTA"
 		CLN = { add_country_modifier = { name = the_big_army duration = 365 } }
 		set_country_flag = poor_mahdist_defeater
-        any_owned = { limit = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 province_id = 1851 is_core = SUD is_core = CAR is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } secede_province = SUD }
+        any_owned = { limit = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 region = ENG_1848 is_core = SUD is_core = CAR is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } secede_province = SUD }
         relation = { who = SUD value = -400 }
 		random_owned = {
 			limit = {
 				owner = {
-					TUR = { any_owned_province = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 province_id = 1851 is_core = SUD is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } }
+					TUR = { any_owned_province = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 region = ENG_1848 is_core = SUD is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } }
 				}
 			}
 			owner = {
 				TUR = {
 					country_event = 98645336
-					any_owned = { limit = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 province_id = 1851 is_core = SUD is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } secede_province = THIS secede_province = SUD }
+					any_owned = { limit = { OR = { province_id = 1847 province_id = 3610 province_id = 3952 region = ENG_1848 is_core = SUD is_core = AZA is_core = ETH is_core = DAR AND = { is_core = SHK NOT = { is_core = EGY } } } } secede_province = THIS secede_province = SUD }
 				}
 			}
 		}

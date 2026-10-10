@@ -16,6 +16,7 @@ political_decisions = {
                 tag = KUK
                 tag = GCF
                 has_country_flag = inherit_sgf
+				has_country_flag = i_am_frc
             }
         }
         allow = {
@@ -652,6 +653,7 @@ political_decisions = {
                 tag = UBD
                 tag = EST
                 tag = LAT
+				has_country_flag = i_am_frc
             }
 			NOT = {
 				AND = {
@@ -773,6 +775,7 @@ political_decisions = {
                 tag = KUK
                 tag = DNB
                 tag = GCF
+				has_country_flag = i_am_frc
             }
         }
         allow = {
@@ -1255,6 +1258,24 @@ political_decisions = {
                 limit = { has_pop_culture = swahili }
                 militancy = -4
             }
+			random_owned = {
+				limit = {
+					owner = { is_our_vassal = ARU }
+				}
+				owner = {
+					release_vassal = ARU
+					leave_alliance = ARU
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { is_our_vassal = IMO }
+				}
+				owner = {
+					release_vassal = IMO
+					leave_alliance = IMO
+				}
+			}
             any_owned = {
                 limit = { is_core = OMA }
                 add_core = MZR

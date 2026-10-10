@@ -9,7 +9,7 @@ political_decisions = {
             NOT = { has_country_flag = french_crusade }
             has_country_flag = monarchy_government
 			has_global_flag = fantasy_countries_enabled
-			TUR = { ai = yes }
+			TUR = { ai = yes is_greater_power = no }
 			NOT = { has_global_flag = you_are_playing_mp }
         }
         allow = {
@@ -97,14 +97,14 @@ political_decisions = {
         potential = {
             ai = no
             tag = RUS
-			NOT = { year = 1855 }
             NOT = { has_country_flag = greek_plan }
             has_country_flag = monarchy_government
 			has_global_flag = fantasy_countries_enabled
-			TUR = { ai = yes }
+			TUR = { ai = yes is_greater_power = no }
 			NOT = { has_global_flag = you_are_playing_mp }
         }
         allow = {
+            has_country_modifier = protector_of_eastern_christendom
             war = no
             NOT = { truce_with = TUR }
             state_n_government = 1
@@ -160,6 +160,29 @@ political_decisions = {
             TUR = {
 				country_event = 96058
             }
+        }
+    }
+    integrate_armenia = {
+        picture = armenian_seal
+        potential = {
+			tag = RUS
+            NOT = { has_country_flag = integrate_armenia }
+			OR = { has_global_flag = treaty_of_kiev has_global_flag = treaty_of_lyon }
+			has_country_flag = caucasus_viceroyalty_established
+			TCA = { exists = no }
+			ARM = { exists = yes }
+        }
+		allow = {
+		    revolution_n_counterrevolution = 1
+            ARM = { vassal_of = THIS in_sphere = THIS }
+		}
+		effect = {
+            prestige = 10
+            badboy = 5
+            set_country_flag = integrate_armenia
+			ARM = { all_core = { add_core = RUS } }
+			1096 = { add_core = RUS }
+            inherit = ARM
         }
     }
 }

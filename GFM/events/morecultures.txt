@@ -3696,9 +3696,9 @@ country_event = {
 		random_owned = { 
 			limit = { owner = { 1095 = { is_core = THIS } } }
 			owner = {
-				1049 = { add_core = THIS }
-				3392 = { add_core = THIS }
-				3315 = { add_core = THIS }
+				1049 = { secede_province = THIS add_core = THIS }
+				3392 = { secede_province = THIS add_core = THIS }
+				3315 = { secede_province = THIS add_core = THIS }
 			} 
 		}
 		add_accepted_culture = tatar
@@ -3721,9 +3721,9 @@ country_event = {
 		random_owned = { 
 			limit = { owner = { 1095 = { is_core = THIS } } }
 			owner = {
-				1049 = { add_core = THIS }
-				3392 = { add_core = THIS }
-				3315 = { add_core = THIS }
+				1049 = { secede_province = THIS add_core = THIS }
+				3392 = { secede_province = THIS add_core = THIS }
+				3315 = { secede_province = THIS add_core = THIS }
 			} 
 		}
 		add_accepted_culture = tatar
@@ -3755,9 +3755,9 @@ country_event = {
 		random_owned = { 
 			limit = { owner = { 1095 = { is_core = THIS } } }
 			owner = {
-				1049 = { add_core = THIS }
-				3392 = { add_core = THIS }
-				3315 = { add_core = THIS }
+				1049 = { secede_province = THIS add_core = THIS }
+				3392 = { secede_province = THIS add_core = THIS }
+				3315 = { secede_province = THIS add_core = THIS }
 			} 
 		}
 		add_accepted_culture = tatar

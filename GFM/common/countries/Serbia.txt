@@ -4,6 +4,7 @@ radical_republic = { 150 100 70 }
 fascist_dictatorship = { 74 40 15 }
 presidential_dictatorship = { 150 100 70 }
 proletarian_dictatorship = { 230 50 50 }
+colonial_company = { 145  79  106 }
 graphical_culture = SerbianGC
 
 party = {

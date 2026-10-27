@@ -50,6 +50,10 @@ political_decisions = {
                 AND = {
 					2397 = { OR = { owner = { civilized = no } empty = yes } }
                     3950 = { OR = { owner = { civilized = no } empty = yes } }
+					2394 = { OR = { owned_by = ARC owned_by = ARG owned_by = LPL owned_by = SBA } }
+                    2396 = { OR = { owned_by = ARC owned_by = ARG owned_by = LPL owned_by = SBA } }
+					2398 = { OR = { owned_by = ARC owned_by = ARG owned_by = LPL owned_by = SBA } }
+					2400 = { OR = { owned_by = ARC owned_by = ARG owned_by = LPL owned_by = SBA } }								  
                     year = 1891
                 }
 				AND = { 

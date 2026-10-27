@@ -32,7 +32,16 @@ country_event = {
         scaled_consciousness = { factor = 5 ideology = radical }
         scaled_consciousness = { factor = 5 ideology = socialist }
         scaled_consciousness = { factor = 5 ideology = communist }
-        ai_chance = { factor = 0 }
+        ai_chance = { 
+			factor = 0.8 
+			modifier = {
+                factor = 0
+                NOT = {
+                        average_militancy = 6
+                        revolt_percentage = 0.5
+                }
+            }
+		}
     }
     
     option = {
@@ -53,6 +62,6 @@ country_event = {
         scaled_consciousness = { factor = -3 ideology = radical }
         scaled_consciousness = { factor = -3 ideology = socialist }
         scaled_consciousness = { factor = -3 ideology = communist }
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0.2 }
     }
 }

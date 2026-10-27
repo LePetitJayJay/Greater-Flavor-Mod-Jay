@@ -77,6 +77,17 @@ country_event = {
 				KOR = { all_core = { OR = { owned_by = THIS empty = yes } } }
 				factor = 6
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_disarmed = yes
+					war_exhaustion = 1
+					AND = {
+						total_amount_of_ships = 50
+						iron_steamers = 1
+					}
+				}
+			}
 		}
 	}
 

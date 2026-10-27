@@ -47,7 +47,7 @@ party = {
 party = {
     name = "JAP_conservative_2"
     start_date = 1868.1.1
-    end_date = 2000.1.1
+    end_date = 1900.1.1
 
     ideology = conservative
 
@@ -76,7 +76,7 @@ party = {
 
 party = {
     name = "JAP_conservative_3"
-    start_date = 1868.1.1
+    start_date = 1900.1.1
     end_date = 2000.1.1
 
     ideology = conservative

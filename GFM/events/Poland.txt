@@ -396,11 +396,12 @@ country_event = {
 		RUS = { diplomatic_influence = { who = POL value = -400 } }
 		relation = { who = AUS value = -200 }
 		relation = { who = PRU value = -200 }
-		political_reform = wealth_weighted_voting
-		political_reform = appointed
+		political_reform = universal_voting
+		political_reform = population_equal_weight
 		political_reform = yes_meeting
 		political_reform = free_press
-		political_reform = harassment
+		political_reform = non_secret_ballots
+		political_reform = debtors_prisons						
 		ai_chance = { factor = 0 }
 	}
 }
@@ -465,6 +466,11 @@ country_event = {
 		add_accepted_culture = lithuanian
 		any_owned = { limit = { is_core = THIS } add_core = PLC }
 		change_tag = PLC
+		PRU_685 = { remove_core = PLC }
+		3318 = { remove_core = PLC }
+		3327 = { remove_core = PLC }
+		3329 = { remove_core = PLC }
+		1006 = { remove_core = PLC }					  
 		scaled_militancy = { factor = -5 issue = jingoism }
 		scaled_militancy = { factor = -2.5 issue = pro_military }
 		scaled_militancy = { factor = 2.5 issue = anti_military }

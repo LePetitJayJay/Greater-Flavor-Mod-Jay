@@ -196,6 +196,7 @@ political_decisions = {
 			RUS_936 = { add_core = PLC }
 			RUS_940 = { add_core = PLC }
 			1007 = { add_core = PLC }
+			1006 = { remove_core = PLC }		   
 			any_owned = { limit = { OR = { is_core = POL is_core = LIT is_core = THIS } } add_core = PLC }
             any_country = {
                 limit = {

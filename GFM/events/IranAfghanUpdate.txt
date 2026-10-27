@@ -377,6 +377,27 @@ country_event = {
 		owns = 3325
 		KDS = { exists = no }
 		month = 8
+		NOT = {
+			AND = {
+				has_country_flag = is_iran
+				has_global_flag = claimed_natborders_per
+				the_historical_theory = 1
+				owns = 890
+				owns = 891
+				owns = 892
+				owns = 924
+				owns = 925
+				owns = 927
+				owns = 2414
+				owns = 3294
+				owns = 3325
+				owns = 3405
+				owns = 3530
+				owns = 3537
+				owns = 3931
+				owns = 3988
+				} 
+			}
 	}
 
     option = {

@@ -431,7 +431,13 @@ political_decisions = {
 	subdue_baltic = {
 		picture = baltic_governates
 		potential = {
-			tag = RUS
+			tag = RUS 
+			NOT = {
+				361 = { 
+					NOT = { is_core = RUS }
+					OR = { is_core = PLC is_core = PLR }
+				}
+			}
 			OR = {
 				EST = { any_core = { NOT = { is_core = RUS } } }
 				LAT = { any_core = { NOT = { is_core = RUS } } }

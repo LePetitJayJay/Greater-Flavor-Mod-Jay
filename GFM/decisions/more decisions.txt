@@ -857,6 +857,7 @@ political_decisions = {
                 tag = RUS
             }
             NOT = { has_global_flag = estonia_in_scandinavia }
+			NOT = { 349 = { is_core = THIS } }					 
         }
         allow = {
             EST = {

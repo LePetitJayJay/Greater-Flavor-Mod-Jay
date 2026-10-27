@@ -1332,12 +1332,12 @@ disarming;Forced to Disarm;Devra se désarmer;Zur Entwaffnung gezwungen;;Obligado
 HAS_NOT_RECENTLY_LOST_WAR;Have NOT lost a war in the last five years.;N'ont perdu AUCUNE guerre au cours des cinq années passées.;Verlor keinen Krieg in den letzten 5 Jahren.;;NO ha perdido una guerra en los últimos cinco años.;;;;;;;;;
 IN_SAME_SPHERE;This country is in the same sphere of influence as us.;Ce pays fait partie de la même sphère d'influence que nous.;Dieses Land ist in derselben Einflusssphäre wie wir.;;Este país está en la misma esfera de influencia que nosotros.;;;;;;;;;
 NOR_reactionary;Konge Partiet;Konge Partiet;Konge Partiet;;Konge Partiet;;;;;;;;;
-ATJ_reactionary;The Nationalist Faction;Faction nationaliste;Die nationalistische Fraktion;;La Facción Nacionalista;;;;;;;;;
-ATJ_liberal;The Liberal Faction;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;
-ATJ_radical;The Radical Faction;Faction radicale;Die radikale Fraktion;;La Facción Radical;;;;;;;;;
-ATJ_socialist;The Socialist Faction;Faction socialiste;Die sozialistische Fraktion;;La Facción Socialista;;;;;;;;;
-ATJ_communist;The Communist Faction;Faction communiste;Die kommunistische Fraktion;;La Facción Comunista;;;;;;;;;
-ATJ_fascist;The Fascist Faction;Faction fasciste;Die faschistische Fraktion;;La Facción Fascista;;;;;;;;;
+ATJ_reactionary;Kawom Ulama;Faction nationaliste;Die nationalistische Fraktion;;La Facción Nacionalista;;;;;;;;;
+ATJ_liberal;Kawom Meukat;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;
+ATJ_radical;Kawom Bajak Laot;Faction radicale;Die radikale Fraktion;;La Facción Radical;;;;;;;;;
+ATJ_socialist;Partai Sosialis;Faction socialiste;Die sozialistische Fraktion;;La Facción Socialista;;;;;;;;;
+ATJ_communist;Partai Komunis;Faction communiste;Die kommunistische Fraktion;;La Facción Comunista;;;;;;;;;
+ATJ_fascist;Darul Islam;Faction fasciste;Die faschistische Fraktion;;La Facción Fascista;;;;;;;;;
 CAL_conservative;Democratic Party;Parti démocrate;Demokratische Partei;;Partido Demócrata;;;;;;;;;
 KHI_conservative;Royal Faction;Faction royale;Königsfraktion;;Facción Real;;;;;;;;;
 KHI_liberal;The Liberal Faction;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;

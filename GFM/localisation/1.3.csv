@@ -3,12 +3,12 @@ HAS_NOT_RECENTLY_LOST_WAR;Have NOT lost a war in the last five years.;N'ont perd
 HAS_RECENTLY_LOST_WAR;Have lost a war in the last five years..;Ont perdu une guerre au cours des cinq années passées.;Verlor einen Krieg in den letzten 5 Jahren.;;Ha perdido una guerra en los últimos cinco años.;;;;;;;;;x
 IN_SAME_SPHERE;This country is in the same sphere of influence as us.;Ce pays fait partie de la même sphère d'influence que nous.;Dieses Land ist in derselben Einflusssphäre wie wir.;;Este país está en la misma esfera de influencia que nosotros.;;;;;;;;;x
 NOR_reactionary;Konge Partiet;Konge Partiet;Konge Partiet;;Konge Partiet;;;;;;;;;x
-ATJ_reactionary;The Nationalist Faction;Faction nationaliste;Die nationalistische Fraktion;;La Facción Nacionalista;;;;;;;;;x
-ATJ_liberal;The Liberal Faction;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;x
-ATJ_anarcho_liberal;The Radical Faction;Faction radicale;Die radikale Fraktion;;La Facción Radical;;;;;;;;;x
-ATJ_socialist;The Socialist Faction;Faction socialiste;Die sozialistische Fraktion;;La Facción Socialista;;;;;;;;;x
-ATJ_communist;The Communist Faction;Faction communiste;Die kommunistische Fraktion;;La Facción Comunista;;;;;;;;;x
-ATJ_fascist;The Fascist Faction;Faction fasciste;Die faschistische Fraktion;;La Facción Fascista;;;;;;;;;x
+ATJ_reactionary;Kawom Ulama;Faction nationaliste;Die nationalistische Fraktion;;La Facción Nacionalista;;;;;;;;;x
+ATJ_liberal;Kawom Meukat;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;x
+ATJ_anarcho_liberal;Kawom Bajak Laot;Faction radicale;Die radikale Fraktion;;La Facción Radical;;;;;;;;;x
+ATJ_socialist;Partai Sosialis;Faction socialiste;Die sozialistische Fraktion;;La Facción Socialista;;;;;;;;;x
+ATJ_communist;Partai Komunis Indonesia;Faction communiste;Die kommunistische Fraktion;;La Facción Comunista;;;;;;;;;x
+ATJ_fascist;Darul Islam;Faction fasciste;Die faschistische Fraktion;;La Facción Fascista;;;;;;;;;x
 CAL_conservative;Democratic Party;Parti démocrate;Demokratische Partei;;Partido Demócrata;;;;;;;;;x
 KHI_conservative;Royal Faction;Faction royale;Königsfraktion;;Facción Real;;;;;;;;;x
 KHI_liberal;The Liberal Faction;Faction libérale;Die liberale Fraktion;;La Facción Liberal;;;;;;;;;x

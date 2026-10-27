@@ -1,4 +1,4 @@
-color = { 255 35 35 }
+color = { 126 10 67 }
 radical_republic = { 100 130 100 }
 fascist_dictatorship = { 10 70 10 }
 presidential_dictatorship = { 255 80 65 }
@@ -31,7 +31,7 @@ party = {
 
     social_policy = no_position_set
     economic_policy = interventionism
-    trade_policy = protectionism
+    trade_policy = free_trade
     religious_policy = pluralism
     citizenship_policy = residency
     war_policy = pro_military

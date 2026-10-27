@@ -9,12 +9,21 @@ country_event = {
 
 	option = {
 		name = "What the...?! To arms!"
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				alliance_with = THIS
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = 50 }
+			
+		}
 		FROM = {
 			war = {
 				target = RUS
 				attacker_goal = { casus_belli = cut_down_to_size_no_add_wargoal_2 }
 				defender_goal = { casus_belli = cut_down_to_size_no_add_wargoal_2 }
-				call_ally = yes
+				call_ally = no
 			}
 		}
 		any_country = {

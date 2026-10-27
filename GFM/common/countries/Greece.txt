@@ -1,5 +1,6 @@
 color = { 122  180  210 }
 colonial_company_3 = { 143  23  23 }
+prov_gov_liberal = { 89 55 179 }
 graphical_culture = GreekGC
 
 party = {

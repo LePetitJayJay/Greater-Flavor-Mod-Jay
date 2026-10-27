@@ -67,7 +67,7 @@ political_decisions = {
                 consciousness = -1
             }
             random_owned = {
-                limit = { owner = { ai = yes } }
+                #limit = { owner = { ai = yes } }
                 owner = {
                     activate_technology = muzzle_loaded_rifles
                     activate_technology = military_staff_system

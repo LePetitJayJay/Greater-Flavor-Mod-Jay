@@ -1,4 +1,4 @@
-color = { 25  120  20 }
+color = { 24  209  168 }
 graphical_culture = JapaneseGC
 
 party = {

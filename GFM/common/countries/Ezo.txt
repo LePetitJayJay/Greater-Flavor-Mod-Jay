@@ -1,7 +1,7 @@
 color = { 255  220  210 }
-absolute_monarchy = { 65  155  30 }
-prussian_constitutionalism = { 65  155  30 }
-hms_government = { 65  155  30 }
+absolute_monarchy = { 25  200  235 }
+prussian_constitutionalism = { 25  200  235 }
+hms_government = { 25  200  235 }
 graphical_culture = JapaneseGC
 
 party = {

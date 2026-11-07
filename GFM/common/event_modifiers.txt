@@ -859,6 +859,16 @@ cult_of_personality = {
     icon = 13
 }
 
+cult_of_personality_caudillo = {
+    ruling_party_support = 2
+    global_pop_militancy_modifier = -0.01
+    global_pop_consciousness_modifier = -0.05
+	cb_generation_speed_modifier = 0.15
+    political_reform_desire = -0.1
+    social_reform_desire = -0.1
+    icon = 13
+}
+
 the_terror = {
     suppression_points_modifier = 2
     issue_change_speed = -2
@@ -6040,6 +6050,13 @@ Day_of_the_Sea = {
     icon = 17
 }
 
+obsolete_naval_institutions = {
+    naval_organisation = -0.25
+    naval_unit_start_experience = -10
+    navy_tech_research_bonus = -0.15
+    icon = 10
+}
+
 Colombian_Caribbean_Ambitions = {
     naval_organisation = 0.20
     navy_tech_research_bonus = 0.1
@@ -6305,5 +6322,11 @@ patronage = {
     pop_consciousness_modifier = 0.10
     farm_rgo_eff = 0.05
     mine_rgo_eff = 0.05
+    icon = 18
+}
+
+opposition_to_slavery = {
+    global_pop_consciousness_modifier = 0.05
+    prestige = -0.07
     icon = 18
 }

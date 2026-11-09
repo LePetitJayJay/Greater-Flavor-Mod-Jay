@@ -619,7 +619,7 @@ country_event = {
 
 country_event = {
     id = 600315
-    title = "The $COUNTRY_ADJ$ Enter Lima"
+    title = "The $COUNTRY_ADJ$ Army Enters Lima"
     desc = "EVTDESC600315"
     picture = "lima_plaza"
 	
@@ -967,6 +967,7 @@ country_event = {
 		clr_country_flag = lost_the_war
 		clr_global_flag = war_of_the_confederation
         set_global_flag = first_pbc_fell
+        clr_country_flag = received_military_aid
         prestige = -5
         badboy = -2
 		random_country = {

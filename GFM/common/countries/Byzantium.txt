@@ -1,4 +1,4 @@
-color = { 143 12 125 }
+color = { 255 75 50 }
 graphical_culture = UltralarpGC
 
 party = {
